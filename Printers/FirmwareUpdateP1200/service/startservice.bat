@@ -1,1 +1,0 @@
-runas /trustlevel:0x20000 "%~dp0CmnInterfaceService.exe"
