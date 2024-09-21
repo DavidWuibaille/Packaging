@@ -1,0 +1,63 @@
+' Definition file for running PE script
+'   Rev 01.  2017.04.13
+' Run a script to load your logo prior to running this script.
+'
+[MESSAGE] Start: Test file th2xxrez_pst_sample.cmx
+[HEX]
+1B 40
+1B 63 30 01
+1B 61 01
+1D 23 F0
+1d 2f 00
+0A
+12				' Double Wide
+"Command File Test"
+"  "
+"TEST RECEIPT PRINTER"
+0A
+"Diebold Nixdorf, Inc."
+"Heinz-Nixdorf-Ring 1"
+"33106 Paderborn"
+"Tel.: +49 5251 / 693 30"
+0A
+"   ....... Diebold Nixdorf, Inc. .......    "
+0A
+0A
+[HEX] 1D 42 01       ' ReverseVideo - on
+"  Fruit Products                            "
+[HEX] 1D 42 00       ' ReverseVideo - off
+0A
+"  Papaya                               $1.89"
+"  Melon                                $2.89"
+"  Papaya                               $1.89"
+"  Papaya                               $1.89"
+"  Papaya                               $1.89"
+0A
+0A
+[HEX] 1D 42 01       ' ReverseVideo - on
+"  Meat Products                             "
+[HEX] 1D 42 00       ' ReverseVideo - off
+"  Rib Eye                              $4.89"
+"  Hamburger                            $2.89"
+12
+0A
+"** http://www.dieboldnixdorf.com **"
+0A
+1D 48 32
+1D 6B 04 30 31 32 33 34 35 36 37 38 00 0D 0A  ' 012345678
+0A
+1B 61 00
+1B 72 02
+"Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û "
+1B 72 01
+" Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û Û"
+' 1B 70 01 50 50            ' Pulse cash drawer
+
+0A 
+0A 0A 0A 0A 0A
+[HEX] 14 06               ' Feed for cut
+[HEX] 19                  ' Full Cut
+' 1D 23 F0
+' 1D 9B 00 05
+' [HEX] 1A                  ' Part Cut
+[MESSAGE] Done: Test file th2xxrez_pst_sample.cmx

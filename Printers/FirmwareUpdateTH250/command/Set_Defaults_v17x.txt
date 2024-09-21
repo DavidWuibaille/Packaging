@@ -1,0 +1,13 @@
+'Script to set Firmware Defaults
+[HEX]
+1F 03 61 40	'Set USB Rx Buffer size 64K
+1F 03 40 01	'Enable RealTime CDKO
+1F 03 2D 01	'Set USB Packet w/error ACCEPT
+1F 03 5A 14	'Set 24V Delay to 200ms at CDKO
+1F 09 01 06	'Save Current Settings as Factory Settings
+1D FF		'Reset
+
+[DELAY] 100	'Wait
+
+[HEX]
+1F 74 1F 74	'Print extended Diagnostic Form
